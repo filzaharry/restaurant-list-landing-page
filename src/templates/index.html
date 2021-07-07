@@ -2,85 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Apps Starter Project</title>
 </head>
 <body>
-<section class="navbar">
-    <div class="container">
-        <div class="row">
-            <div class="col-logo">
-                <img src="./images/heros/log.jpg" width="70" alt="logo-navbar">
-            </div>
-            <div class="col-nav-menu">
-                <ul class="nav">
-                    <li>Home</li>
-                    <li>Favourites</li>
-                    <li>About Us</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
 
+<div class="nav-desktop">
+    <h1 class="logo">RestoD</h1>
+    <div class="nav">
+        <a href="#">Home</a>
+        <a href="#">Favorite</a>
+        <a href="https://github.com/filzaharry/">About Us</a>
+    </div>
+</div>
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Home</a>
+    <a href="#">Favorite</a>
+    <a href="https://github.com/filzaharry/">About Us</a>
+</div>
+<p class="nav-icon" onclick="openNav()">&#9776;</p>
 
 <section class="jumbotron">
-    <div class="jumbotron-title">
-        <div class="container">
-            <h3>Restaurant Cepat Saji</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro asperiores dolorem vero necessitatibus voluptate quasi autem quos commodi provident velit, architecto iure, cupiditate expedita quaerat quisquam dignissimos sint animi, modi nemo suscipit beatae inventore nostrum dolore officia. Libero ullam voluptatem laudantium reprehenderit facilis sequi expedita optio, accusamus inventore? Molestiae quas deserunt nihil ratione ex, perspiciatis totam. </p>
-            <input class="search-resto" type="text" name="search" id="text" placeholder="Search your favourites resto here ...">
-            <button class="btn-search-resto">Search</button>
-        </div>
+    <div class="circle"></div>
+    <div class="circle-2"></div>
+    <div class="container">
+        <h2 class="before-jumbotron">Discover</h2>
+        <h2 class="before-jumbotron">Restaurant</h2>
     </div>
-    <div class="jumbotron-gradient"></div>
-    <img src="./images/heros/hero-image_2.jpg" alt="hero">
+    <div class="jumbotron-title">
+        <h3>The Soothing Dessert</h3>
+        <div class="stars">
+            <p style="display: inline-block; color: #FCC12D; font-size: 20px;">&#9733;</p>
+            <p style="display: inline-block; color: #FCC12D; font-size: 20px;">&#9733;</p>
+            <p style="display: inline-block; color: #FCC12D; font-size: 20px;">&#9733;</p>
+            <p style="display: inline-block; color: #FCC12D; font-size: 20px;">&#9733;</p>
+            <p style="display: inline-block; color: grey; font-size: 20px;">&#9734;</p>
+            <p style="display: inline-block; margin-top: -5px;">(250 Reviews)</p>
+        </div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            <button class="btn-jumbotron">Details</button>
+           
+    </div>
+    <div class="img-container">
+        <img src="./images/heros/hero-image_2.jpg" alt="hero">
+    </div>
 </section>
 
+<div style="display: flex;
+justify-content: center;">
+<p style="color: #FCC12D;font-size: 30px;display: inline-block;padding: 10px;">&#8226;</p>
+<p style="color: #FCC12D;font-size: 30px;display: inline-block;padding: 10px;">&#8226;</p>
+<p style="color: #FCC12D;font-size: 30px;display: inline-block;padding: 10px;">&#8226;</p>
+<p style="color: #FCC12D;font-size: 30px;display: inline-block;padding: 10px;">&#8226;</p>
+</div>
 
 <section class="container-section">
-    <h3 class="title">Restaurant List</h3>
-    <hr class="hr-underline">
-    
-    <div class="cards-section">
-        <div class="test">
-        </div>
-        <div class="card">
-            <img src="./images/heros/hero-image_1.jpg" alt="resto1">
-            <div class="in-card">
-                <h4>Waiting For You</h4>
-                <button>Check In</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./images/heros/hero-image_2.jpg" alt="resto2">
-            <div class="in-card">
-                <h4>Waiting For You</h4>
-                <button>Check In</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./images/heros/hero-image_3.jpg" alt="resto3">
-            <div class="in-card">
-                <h4>Waiting For You</h4>
-                <button>Check In</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./images/heros/hero-image_4.jpg" alt="resto1">
-            <div class="in-card">
-                <h4>Waiting For You</h4>
-                <button>Check In</button>
-            </div>
-        </div>
-    </div>  
+    <h3 class="title">Most Popular</h3>
+
+    <div id="main-content" class="main-content">
+        <section id="resto-list" class="resto-list"></section>
+    </div>
     
     
     <section class="footer">
-        <h3>Copyright@Restaurant-Hunter Apps | Allrights reserved | 2021</h3>
+        <p>Copyright@Restaurant-Hunter Apps&#127840;| Allrights reserved | 2021</p>
     </section>
 </section>
 
-
+<script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
 
 
 </body>
