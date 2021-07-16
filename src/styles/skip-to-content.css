@@ -2,11 +2,10 @@
     position: absolute;
     top: -40px;
     left: 0;
-    background-color: #bf1722;
+    opacity: 100%;
     color: white;
     padding: 8px;
     z-index: 100;
-    visibility: hidden;
  }
 
  .skip-link:focus {

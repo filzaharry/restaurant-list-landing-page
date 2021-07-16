@@ -1,65 +1,10 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Restaurant Apps Starter Project</title></head><body><headers class="nav-desktop"><a href="#maincontent" class="skip-link">Skip To Content</a><h1 class="logo">RestoD</h1><div class="nav"><a href="index.html">Home</a> <a href="#">Favorite</a> <a href="https://github.com/filzaharry/">About Us</a></div></headers><nav aria-labelledby="hamburger"><button id="hamburger" class="hamburger" aria-label="Show Navigation Menu" aria-expanded="false" tabindex="0">☰</button><div id="navMenu" class="navMenu hidden vh"><button id="closeNavMenu" class="closeBtn" aria-label="Hide Navigation Menu">×</button><ul><li><a href="#">Company</a></li><li><a href="#">Services</a></li><li><a href="#">Portfolio</a></li><li><a href="#">Contact</a></li></ul></div></nav><section class="jumbotron"><div class="circle"></div><div class="circle-2"></div><div class="container"><h2 class="before-jumbotron">Discover</h2><h2 class="before-jumbotron">Restaurant</h2></div><div class="jumbotron-title"><h3>The Soothing Dessert</h3><div class="stars"><p style="display: inline-block; color: #FCC12D; font-size: 20px;">&#9733;</p><p style="display: inline-block; color: #FCC12D; font-size: 20px;">&#9733;</p><p style="display: inline-block; color: #FCC12D; font-size: 20px;">&#9733;</p><p style="display: inline-block; color: #FCC12D; font-size: 20px;">&#9733;</p><p style="display: inline-block; color: grey; font-size: 20px;">&#9734;</p><p style="display: inline-block; margin-top: -5px;">(250 Reviews)</p></div><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p><button class="btn-jumbotron">Details</button></div><div class="img-container"><img src="./images/heros/hero-image_2.jpg" alt="hero"></div></section><div style="display: flex;
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Author: Filza Harry,
+    Illustrator: Filza Harry, Category: Place, App Name: Resto-D,
+    Length: 784 pages"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Restaurant Apps Starter Project</title></head><body><a href="#maincontent" class="skip-link">Skip To Content</a> <button class="nav-icon" onclick="openNav()">&#9776;</button><header id="mySidenav" class="sidenav"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> <a style="margin-top: 10px;" href="index.html"><div style="padding-top: 22px;padding-bottom: 22px; border: none; background-color: transparent;color: white;">Home</div></a><a style="margin-top: 10px;" href="#"><div style="padding-top: 22px;padding-bottom: 22px; border: none; background-color: transparent;color: white;">Favorite</div></a><a style="margin-top: 10px;" href="https://github.com/filzaharry/"><div style="padding-top: 22px;padding-bottom: 22px; border: none; background-color: transparent;color: white;">About Us</div></a></header><headers class="nav-desktop"><h1 class="logo">Resto-D</h1><div class="nav"><a href="index.html">Home</a> <a href="#">Favorite</a> <a href="https://github.com/filzaharry/">About Us</a></div></headers><section class="jumbotron"><div class="circle"></div><div class="circle-2"></div><h2 class="before-jumbotron">Discover Restaurant</h2><div class="jumbotron-title"><h3>The Soothing Dessert</h3><div class="stars"><p style="display: inline-block; color: #FCC12D; font-size: 20px;">&#9733;</p><p style="display: inline-block; color: #FCC12D; font-size: 20px;">&#9733;</p><p style="display: inline-block; color: #FCC12D; font-size: 20px;">&#9733;</p><p style="display: inline-block; color: #FCC12D; font-size: 20px;">&#9733;</p><p style="display: inline-block; color: grey; font-size: 20px;">&#9734;</p><p style="display: inline-block; margin-top: -5px;">(250 Reviews)</p></div><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p><button class="btn-jumbotron">Details</button></div><div class="img-container"><img src="./images/heros/hero-image_2.jpg" alt="hero"></div></section><div style="display: flex;
 justify-content: center;"><p style="color: #FCC12D;font-size: 30px;display: inline-block;padding: 10px;">&#8226;</p><p style="color: #FCC12D;font-size: 30px;display: inline-block;padding: 10px;">&#8226;</p><p style="color: #FCC12D;font-size: 30px;display: inline-block;padding: 10px;">&#8226;</p><p style="color: #FCC12D;font-size: 30px;display: inline-block;padding: 10px;">&#8226;</p></div><main class="container-section" id="maincontent"><h3 class="title">Most Popular</h3><div id="main-content" class="main-content"><section id="resto-list" class="resto-list"></section></div><footer class="footer"><p>Copyright@Restaurant-Hunter Apps&#127840;| Allrights reserved | 2021</p></footer></main><script>function openNav() {
       document.getElementById("mySidenav").style.width = "250px";
     }
     
     function closeNav() {
       document.getElementById("mySidenav").style.width = "0";
-    }</script><script>let myHamburger = document.getElementById('hamburger'),
-    myNavMenu = document.getElementById('navMenu'),
-    closeNavMenu = document.getElementById('closeNavMenu'),
-    main = document.querySelector('main'),
-    myMenuLinks = document.querySelectorAll('nav button, nav a'),
-    transitionTime = 400, // This matches what's in the CSS for the transition
-    overlay = document.createElement('div');
-
-document.body.appendChild(overlay);
-
-function doMenuOpen () {
-  myHamburger.setAttribute('aria-expanded', true);
-  myNavMenu.classList.remove('vh');
-  myNavMenu.classList.remove('hidden');
-  main.classList.add('menuOpen');
-  myHamburger.classList.add('menuOpen');
-  myHamburger.classList.add('hamburger-z');
-  window.setTimeout(function () {
-    closeNavMenu.focus();
-    overlay.classList.add('overlay');
-    overlay.addEventListener('click', function () {
-      doMenuClose();
-    }, false);
-
-    document.addEventListener('keyup', function (e) {
-      // 27 = ESC key
-      if (e.keyCode === 27) {
-        doMenuClose();
-      }
-    }, false);
-  }, transitionTime);
-}
-
-function doMenuClose () {
-  myHamburger.setAttribute('aria-expanded', false);
-  myNavMenu.classList.add('hidden');
-  main.classList.remove('menuOpen');
-  myHamburger.classList.remove('menuOpen');
-  overlay.classList.remove('overlay');
-  window.setTimeout(function () {
-    myNavMenu.classList.add('vh');
-    myHamburger.focus();
-    overlay.classList.remove('overlay');
-    myHamburger.classList.remove('hamburger-z');
-  }, transitionTime);
-}
-
-myHamburger.addEventListener('click', function () {
-  if (myNavMenu.classList.contains('hidden')) {
-    doMenuOpen();
-  } else {
-    doMenuClose();
-  }
-}, false);
-
-closeNavMenu.addEventListener('click', function () {
-  doMenuClose();
-}, false);</script><script src="bundle.js"></script></body></html>
+    }</script><script src="bundle.js"></script></body></html>
