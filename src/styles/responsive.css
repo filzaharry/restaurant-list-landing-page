@@ -11,11 +11,6 @@
   
 }
   /* For mobile phones: */
-
-  .jumbotron-title:hover{
-    opacity: 20%;
-  }
-
   .logo {
     display: none;
   }
@@ -59,16 +54,11 @@
     background-size: cover;
   }
 
-.jumbotron-title {
-  padding: 10px 20px 20px 20px;
-  box-shadow: 1px 11px 30px 0px rgba(0,0,0,0.35);
-  margin: 20px;
-  border-radius: 10px;
-  z-index: 0;
-  position: absolute;
-  background-color: white;
-  visibility: visible;
-}
+  .jumbotron-title{
+    visibility: none;
+    margin: 20px;
+    margin-bottom: 60px;
+  }
 
 .jumbotron-title .stars {
   margin-top: -10px;
@@ -89,6 +79,7 @@
   text-align: justify;
   color: rgb(74, 74, 74);
   margin-top: -15px;
+  margin-bottom: 30px;
 }
 
 .jumbotron-title input {
@@ -97,14 +88,18 @@
   border: none;
 }
 
-.jumbotron-title .btn-jumbotron {
+.btn-jumbotron {
+  margin-top: 20px;
   padding: 10px 20px;
   margin-left: -5px;
   border: none;
   background-color: salmon;
   border-radius: 5px;
+  text-decoration: none;
+  color: white;
 }
-.jumbotron-title .btn-jumbotron:hover {
+
+.btn-jumbotron:hover {
   background-color: rgb(252, 161, 151);
 }
 
@@ -231,6 +226,7 @@
     box-shadow: 1px 11px 30px 0px rgba(0,0,0,0.35);
     border-radius: 10px;
     margin: 200px;
+    height: 180px;
     z-index: 0;
     position: absolute;
     background-color: white;
@@ -396,10 +392,6 @@
   @media only screen and (min-width: 1080px) {
     /* For desktop: */
 
-    .jumbotron-title{
-      opacity: 100%;
-    }
-    
   .nav-desktop {
     visibility: visible;
     height: 20px;
@@ -428,14 +420,10 @@
     text-decoration: none;
     color: #383129;
     font-weight: bold;
-    margin: 20px;
-    padding: 10px;
   }
 
   .nav-desktop a:hover {
-    background-color: lightsalmon;
-    padding: 10px 20px;
-    border-radius: 10px;
+    color: lightsalmon;
   }
 
   .nav-icon {
@@ -471,9 +459,10 @@
     }
   
   .jumbotron-title {
-    padding: 10px 20px 20px 20px;
+    padding: 5px 25px 20px 25px;
     box-shadow: 1px 11px 30px 0px rgba(0,0,0,0.35);
     margin: 200px;
+    height: 180px;
     border-radius: 10px;
     z-index: 0;
     position: absolute;
@@ -503,14 +492,13 @@
     border: none;
   }
   
-  .jumbotron-title .btn-jumbotron {
-    padding: 10px 20px;
+  .btn-jumbotron {
     margin-left: -5px;
     border: none;
     background-color: salmon;
     border-radius: 5px;
   }
-  .jumbotron-title .btn-jumbotron:hover {
+  .btn-jumbotron:hover {
     background-color: rgb(252, 161, 151);
   }
 
